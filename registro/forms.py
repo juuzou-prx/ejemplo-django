@@ -6,4 +6,4 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         #validar que ambas contraseñas coincidan - contraseña cifrada
-        fields = ['username', 'password', 'password2']
+        fields = ['username', 'password1', 'password2']

@@ -119,7 +119,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 #ubicacion fisica donde django almacena los archivos multimedia
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+LOGIN_URL = 'iniciar_sesion'
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration

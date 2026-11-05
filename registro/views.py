@@ -4,16 +4,16 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomUserCreationForm
 from .models import Perfil
 
-def inciar_sesion(request):
+def iniciar_sesion(request):
     if request.user.is_authenticated:
-        return redirect('listra_libros')
+        return redirect('lista_libros')
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             user = form.get_user()
             Perfil.objects.get_or_create(user=user)
             login(request, user)
-            return redirect('lista_libro')
+            return redirect('lista_libros')
     else:
         form = AuthenticationForm(request)
     
