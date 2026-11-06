@@ -60,6 +60,9 @@ def detalle_libros(request, pk):
     #obtener el libro por su id, si no existe muestra error 404
     libro = get_object_or_404(Libro, pk=pk)
     return render(request, 'catalogo/libro/libro_detail.html', {'obj': libro})
+def lista_card_libros(request):
+    libros = Libro.objects.all()
+    return render(request, 'catalogo/libro/libro_card_list.html', {'libros': libros})
 
 #CATEGORIAS
 def lista_categorias(request):
